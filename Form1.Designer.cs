@@ -34,9 +34,9 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(222, 178);
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new Size(213, 113);
+            button1.Size = new Size(202, 49);
             button1.TabIndex = 0;
             button1.Text = "APERTA AQUI";
             button1.UseVisualStyleBackColor = true;
@@ -46,7 +46,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 308);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";

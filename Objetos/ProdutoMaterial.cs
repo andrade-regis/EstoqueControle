@@ -8,17 +8,53 @@ namespace EstoqueControle.Objetos
 {
     public class ProdutoMaterial
     {
-        public int ProdutoMaterialId { get; set; }
-        public int ProdutoId { get; set; }
-        public int MaterialId { get; set; }
-        public int QuantidadeNecessaria { get; set; }
+        private bool _alterado;
+        private int _produtoMaterialId;
+        private int _produtoId;
+        private int _materialId;
+        private int _quantidadeNecessaria;
+
+        public bool Alterado
+        {
+            get { return _alterado; }
+            set { _alterado = value; }
+        }
+
+        public int ProdutoMaterialId
+        {
+            get { return _produtoMaterialId; }
+            set { _alterado = true;
+                  _produtoMaterialId = value;}
+        }
+
+        public int ProdutoId
+        {
+            get { return _produtoId; }
+            set { _alterado = true;
+                  _produtoId = value;}
+        }
+
+        public int MaterialId
+        {
+            get { return _materialId; }
+            set { _alterado = true;
+                  _materialId = value;}
+        }
+
+        public int QuantidadeNecessaria
+        {
+            get { return _quantidadeNecessaria; }
+            set { _alterado = true;
+                  _quantidadeNecessaria = value;}
+        }
 
         public ProdutoMaterial() 
         {
-            ProdutoMaterialId = 0;
-            ProdutoId = 0;
-            MaterialId = 0;
-            QuantidadeNecessaria = 0;
+            _alterado = false;
+            _produtoMaterialId = 0;
+            _produtoId = 0;
+            _materialId = 0;
+            _quantidadeNecessaria = 0;
         }
 
         ~ProdutoMaterial() 

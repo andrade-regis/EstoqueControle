@@ -8,17 +8,52 @@ namespace EstoqueControle.Objetos
 {
     public class Produto
     {
-        public int ProdutoId { get; set; }
-        public byte[] Imagem { get; set; }
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
+        private bool _alterado;
+        private int _produtoId;
+        private byte[] _imagem;
+        private string _nome;
+        private string _descricao;
+
+        public bool Alterado
+        {
+            get { return _alterado; }
+            set { _alterado = value; }
+        }
+
+        public int ProdutoId
+        {
+            get { return _produtoId; }
+            set { _produtoId = value; }
+        }
+
+        public byte[] Imagem
+        {
+            get { return _imagem; }
+            set { _alterado = true; 
+                  _imagem = value; }
+        }
+
+        public string Nome
+        {
+            get { return _nome; }
+            set { _alterado = true;
+                  _nome = value; }
+        }
+
+        public string Descricao
+        {
+            get { return _descricao;}
+            set { _alterado = true;
+                  _descricao = value; }
+        }
 
         public Produto()
         {
-            ProdutoId = 0;
-            Imagem = new byte[0];
-            Nome = string.Empty;
-            Descricao = string.Empty;
+            _alterado = false;
+            _produtoId = 0;
+            _imagem = new byte[0];
+            _nome = string.Empty;
+            _descricao = string.Empty;
         }
 
         ~Produto()
